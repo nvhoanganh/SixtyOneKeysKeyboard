@@ -1,1 +1,3 @@
-See lib\keyboard.ahk for details
+- See lib\keyboard.ahk for details
+- Make required changes base on https://www.autohotkey.com/docs/KeyList.htm
+- generate new executable by running `compiler.cmd`

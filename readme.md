@@ -1,0 +1,1 @@
+See lib\keyboard.ahk for details

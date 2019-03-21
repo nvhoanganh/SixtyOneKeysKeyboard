@@ -65,6 +65,6 @@ CapsLock & n::keyWithCtrlAltShift("PgDn","n")       ;PageDown
 CapsLock & m:: Send ^m
 CapsLock & Space:: Send, ^{Space}
 CapsLock & Enter:: Send, ^{Enter}
-LWin::Ctrl
-RCtrl::LWin
-
+AppsKey::WheelUp  
+RCtrl::WheelDown  
+RAlt::Ctrl

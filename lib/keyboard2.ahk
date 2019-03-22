@@ -4,14 +4,9 @@ SetCapsLockState, AlwaysOff
 #include %A_LineFile%\..\remote-desktop.ahk.
 ; diable the NumLock so as to only use the number pad for numbers
 SetNumlockState, AlwaysOn
-
-;-----------------------------------o
-CapsLock & `::                                  ;CapsLock + ` | {CapsLock}
-GetKeyState, CapsLockState, CapsLock, T
-if CapsLockState = D
-    SetCapsLockState, AlwaysOff
-else
-    SetCapsLockState, AlwaysOn
+CapsLock::LShift
+LShift::LCtrl
+LCtrl::CapsLock   
 KeyWait, ``
 return
 
@@ -28,6 +23,7 @@ CapsLock & 9:: keyWithCtrlAltShift("F9","9")
 CapsLock & 0:: keyWithCtrlAltShift("F10","0")
 Capslock & -:: keyWithCtrlAltShift("F11","-")
 Capslock & =:: keyWithCtrlAltShift("F12","=")
+
 
 CapsLock & q:: Send ^q
 CapsLock & w:: Send ^w
@@ -59,25 +55,13 @@ CapsLock & <::Browser_Back
 CapsLock & >::Browser_Forward  
 CapsLock & `;::keyWithCtrlAltShift("Home", ",")      ;Home
 CapsLock & '::keyWithCtrlAltShift("End", ".")      ;End
-CapsLock & BackSpace:: keyWithCtrlAltShift("Del","BackSpace")       ;Del
+;CapsLock & BackSpace:: keyWithCtrlAltShift("Del","BackSpace")       ;Del
 ;CapsLock & `;:: Send, { AppsKey }               ;Context Menu
 CapsLock & ]:: Send, { Click Right }            ;Click Right
 CapsLock & [:: Send, { Click Left }             ;Click Left
-
-
 CapsLock & u::keyWithCtrlAltShift("PgUp","u")       ;PageUp
 CapsLock & i::keyWithCtrlAltShift("Up", "i")        ;Up
 CapsLock & j::keyWithCtrlAltShift("Left", "j")      ;Left
 CapsLock & k::keyWithCtrlAltShift("Down", "k")      ;Down
 CapsLock & l::keyWithCtrlAltShift("Right", "l")     ;Right
 CapsLock & m::keyWithCtrlAltShift("PgDn","m")       ;PageDown
-[::Send +[ ;switch {} and []
-]::Send +]
-+[::Send [
-+]::Send ]
-+\::Send \ ;Switch | and \
-\::Send +\
-+9::Send 9 ;switch ( and 9
-9::Send +9 ;switch ) and 0
-+0::Send 0 
-0::Send +0

@@ -60,10 +60,9 @@ CapsLock & b:: Send ^b
 
 CapsLock & Space:: Send, ^{Space}
 CapsLock & Enter:: Send, ^{Enter}
-AppsKey::WheelUp  
-RCtrl::WheelDown  
-RAlt::Ctrl
-CapsLock & <::Browser_Back  
+AppsKey::WheelUp
+RAlt::LWin
+CapsLock & <::Browser_Back
 CapsLock & >::Browser_Forward  
 CapsLock & `;::keyWithCtrlAltShift("Home", ",")      ;Home
 CapsLock & '::keyWithCtrlAltShift("End", ".")      ;End

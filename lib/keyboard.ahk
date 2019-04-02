@@ -15,7 +15,15 @@ else
 KeyWait, ``
 return
 
-CapsLock & q:: Send, { ESC }           ;ESC
+; Press CAPSLOCK twice (fast) => send ESC key
+~$CapsLock::
+KeyWait, CapsLock, U
+KeyWait, CapsLock, D, T0.2
+If (ErrorLevel = 0)
+Send, { ESC } 
+return
+
+
 CapsLock & 1:: keyWithCtrlAltShift("F1","1")        ;F1 - F12
 CapsLock & 2:: keyWithCtrlAltShift("F2","2")
 CapsLock & 3:: keyWithCtrlAltShift("F3","3")
@@ -29,7 +37,7 @@ CapsLock & 0:: keyWithCtrlAltShift("F10","0")
 Capslock & -:: keyWithCtrlAltShift("F11","-")
 Capslock & =:: keyWithCtrlAltShift("F12","=")
 
-
+CapsLock & q:: Send ^q
 CapsLock & w:: Send ^w
 CapsLock & e:: Send ^e
 CapsLock & r:: Send ^r

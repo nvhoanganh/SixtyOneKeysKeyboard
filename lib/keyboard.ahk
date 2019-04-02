@@ -15,7 +15,7 @@ else
 KeyWait, ``
 return
 
-CapsLock:: Send, { ESC }           ;ESC
+CapsLock & q:: Send, { ESC }           ;ESC
 CapsLock & 1:: keyWithCtrlAltShift("F1","1")        ;F1 - F12
 CapsLock & 2:: keyWithCtrlAltShift("F2","2")
 CapsLock & 3:: keyWithCtrlAltShift("F3","3")
@@ -29,7 +29,7 @@ CapsLock & 0:: keyWithCtrlAltShift("F10","0")
 Capslock & -:: keyWithCtrlAltShift("F11","-")
 Capslock & =:: keyWithCtrlAltShift("F12","=")
 
-CapsLock & q:: Send ^q
+
 CapsLock & w:: Send ^w
 CapsLock & e:: Send ^e
 CapsLock & r:: Send ^r

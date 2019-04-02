@@ -15,15 +15,15 @@ else
 KeyWait, ``
 return
 
-; Press CAPSLOCK twice (fast) => send ESC key
+
 ~$CapsLock::
-KeyWait, CapsLock, U
-KeyWait, CapsLock, D, T0.2
-If (ErrorLevel = 0)
-Send, { ESC } 
-return
+KeyWait, CapsLock, U		; wait for z to be released
+KeyWait, CapsLock, D, T0.2		; and pressed again within 0.2 seconds
+if (ErrorLevel = 0)			; timed-out (only a single press
+Send, { ESC }  
+Return
 
-
+; CapsLock & q:: Send, { ESC }           ;ESC
 CapsLock & 1:: keyWithCtrlAltShift("F1","1")        ;F1 - F12
 CapsLock & 2:: keyWithCtrlAltShift("F2","2")
 CapsLock & 3:: keyWithCtrlAltShift("F3","3")
@@ -37,7 +37,7 @@ CapsLock & 0:: keyWithCtrlAltShift("F10","0")
 Capslock & -:: keyWithCtrlAltShift("F11","-")
 Capslock & =:: keyWithCtrlAltShift("F12","=")
 
-CapsLock & q:: Send ^q
+
 CapsLock & w:: Send ^w
 CapsLock & e:: Send ^e
 CapsLock & r:: Send ^r
@@ -60,10 +60,9 @@ CapsLock & b:: Send ^b
 
 CapsLock & Space:: Send, ^{Space}
 CapsLock & Enter:: Send, ^{Enter}
-AppsKey::WheelUp  
-RCtrl::WheelDown  
-RAlt::Ctrl
-CapsLock & <::Browser_Back  
+AppsKey::WheelUp
+RAlt::LWin
+CapsLock & <::Browser_Back
 CapsLock & >::Browser_Forward  
 CapsLock & `;::keyWithCtrlAltShift("Home", ",")      ;Home
 CapsLock & '::keyWithCtrlAltShift("End", ".")      ;End

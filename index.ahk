@@ -9,5 +9,5 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 #Include %A_LineFile%\..\init.ahk.
 #Include %A_LineFile%\..\lib\index.ahk.
-#include %A_LineFile%\..\keyboard.ahk.
-#Include %A_LineFile%\..\tray.ahk.
+#include %A_LineFile%\..\lib\keyboard.ahk.
+#Include %A_LineFile%\..\lib\tray.ahk.

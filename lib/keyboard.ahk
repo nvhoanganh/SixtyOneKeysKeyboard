@@ -71,13 +71,3 @@ CapsLock & j::keyWithCtrlAltShift("Left", "j")      ;Left
 CapsLock & k::keyWithCtrlAltShift("Down", "k")      ;Down
 CapsLock & l::keyWithCtrlAltShift("Right", "l")     ;Right
 CapsLock & m::keyWithCtrlAltShift("PgDn","m")       ;PageDown
-[::Send +[ ;switch {} and []
-]::Send +]
-+[::Send [
-+]::Send ]
-+\::Send \ ;Switch | and \
-\::Send +\
-+9::Send 9 ;switch ( and 9
-9::Send +9 ;switch ) and 0
-+0::Send 0 
-0::Send +0

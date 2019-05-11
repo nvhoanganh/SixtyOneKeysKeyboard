@@ -70,7 +70,7 @@ CapsLock & BackSpace:: keyWithCtrlAltShift("Del","BackSpace")       ;Del
 ;CapsLock & `;:: Send, { AppsKey }               ;Context Menu
 CapsLock & ]:: Send, { Click Right }            ;Click Right
 CapsLock & [:: Send, { Click Left }             ;Click Left
-
+LWin::LCtrl
 
 CapsLock & u::keyWithCtrlAltShift("PgUp","u")       ;PageUp
 CapsLock & i::keyWithCtrlAltShift("Up", "i")        ;Up

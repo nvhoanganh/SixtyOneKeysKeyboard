@@ -43,7 +43,7 @@ CapsLock & e:: Send ^e
 CapsLock & r:: Send ^r
 CapsLock & t:: Send ^t
 CapsLock & y:: Send ^y
-CapsLock & o:: Send ^o
+CapsLock & o:: Send, { BackSpace }
 CapsLock & p:: Send ^p
 CapsLock & a:: Send ^a
 CapsLock & d:: Send ^d

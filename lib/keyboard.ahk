@@ -32,7 +32,7 @@ CapsLock & 5:: keyWithCtrlAltShift("F5","5")
 CapsLock & 6:: keyWithCtrlAltShift("F6","6")
 CapsLock & 7:: keyWithCtrlAltShift("F7","7")
 CapsLock & 8:: keyWithCtrlAltShift("F8","8")
-CapsLock & 9:: Send, { BackSpace }
+CapsLock & 9:: keyWithCtrlAltShift("F9","9")
 CapsLock & 0:: keyWithCtrlAltShift("F10","0")
 Capslock & -:: keyWithCtrlAltShift("F11","-")
 Capslock & =:: keyWithCtrlAltShift("F12","=")
@@ -50,7 +50,7 @@ CapsLock & d:: Send ^d
 CapsLock & s:: Send ^s
 CapsLock & f:: Send ^f   
 CapsLock & g:: Send ^g
-CapsLock & h:: Send ^h
+CapsLock & h:: Send, { BackSpace }
 CapsLock & z:: Send ^z
 CapsLock & x:: Send ^x
 CapsLock & c:: Send ^c

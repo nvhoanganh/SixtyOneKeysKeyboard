@@ -43,14 +43,14 @@ CapsLock & e:: Send ^e
 CapsLock & r:: Send ^r
 CapsLock & t:: Send ^t
 CapsLock & y:: Send ^y
-CapsLock & o:: Send ^o
+CapsLock & o:: Send ^o 
 CapsLock & p:: Send ^p
 CapsLock & a:: Send ^a
 CapsLock & d:: Send ^d
 CapsLock & s:: Send ^s
 CapsLock & f:: Send ^f   
 CapsLock & g:: Send ^g
-CapsLock & h:: Send ^h
+CapsLock & h:: Send, { BackSpace }
 CapsLock & z:: Send ^z
 CapsLock & x:: Send ^x
 CapsLock & c:: Send ^c
@@ -70,7 +70,7 @@ CapsLock & BackSpace:: keyWithCtrlAltShift("Del","BackSpace")       ;Del
 ;CapsLock & `;:: Send, { AppsKey }               ;Context Menu
 CapsLock & ]:: Send, { Click Right }            ;Click Right
 CapsLock & [:: Send, { Click Left }             ;Click Left
-
+LWin::LCtrl
 
 CapsLock & u::keyWithCtrlAltShift("PgUp","u")       ;PageUp
 CapsLock & i::keyWithCtrlAltShift("Up", "i")        ;Up

@@ -18,7 +18,7 @@ return
 
 ~$CapsLock::
 KeyWait, CapsLock, U		; wait for z to be released
-KeyWait, CapsLock, D, T0.2		; and pressed again within 0.2 seconds
+KeyWait, CapsLock, D, T0.1		; and pressed again within 0.2 seconds
 if (ErrorLevel = 0)			; timed-out (only a single press
 Send, { ESC }  
 Return

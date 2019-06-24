@@ -18,12 +18,12 @@ return
 
 ~$CapsLock::
 KeyWait, CapsLock, U		; wait for z to be released
-KeyWait, CapsLock, D, T0.1		; and pressed again within 0.2 seconds
+KeyWait, CapsLock, D, T0.15		; and pressed again within 0.2 seconds
 if (ErrorLevel = 0)			; timed-out (only a single press
 Send, { ESC }  
 Return
 
-; CapsLock & q:: Send, { ESC }           ;ESC
+CapsLock & q:: Send, { ESC }           ;ESC
 CapsLock & 1:: keyWithCtrlAltShift("F1","1")        ;F1 - F12
 CapsLock & 2:: keyWithCtrlAltShift("F2","2")
 CapsLock & 3:: keyWithCtrlAltShift("F3","3")
@@ -78,3 +78,4 @@ CapsLock & j::keyWithCtrlAltShift("Left", "j")      ;Left
 CapsLock & k::keyWithCtrlAltShift("Down", "k")      ;Down
 CapsLock & l::keyWithCtrlAltShift("Right", "l")     ;Right
 CapsLock & m::keyWithCtrlAltShift("PgDn","m")       ;PageDown
+LControl::Send, { ESC }

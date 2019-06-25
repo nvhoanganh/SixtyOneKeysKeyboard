@@ -58,7 +58,7 @@ CapsLock & v:: Send ^v
 CapsLock & b:: Send ^b
 
 
-CapsLock & Space:: Send, ^{Space}
+CapsLock & Space:: Send, { ESC }
 CapsLock & Enter:: Send, ^{Enter}
 AppsKey::WheelUp
 RAlt::LWin
@@ -78,4 +78,3 @@ CapsLock & j::keyWithCtrlAltShift("Left", "j")      ;Left
 CapsLock & k::keyWithCtrlAltShift("Down", "k")      ;Down
 CapsLock & l::keyWithCtrlAltShift("Right", "l")     ;Right
 CapsLock & m::keyWithCtrlAltShift("PgDn","m")       ;PageDown
-LControl::Send, { ESC }

@@ -16,12 +16,12 @@ KeyWait, ``
 return
 
 
-~$CapsLock::
-KeyWait, CapsLock, U		; wait for z to be released
-KeyWait, CapsLock, D, T0.15		; and pressed again within 0.2 seconds
-if (ErrorLevel = 0)			; timed-out (only a single press
-Send, { ESC }  
-Return
+; ~$CapsLock::
+; KeyWait, CapsLock, U		; wait for z to be released
+; KeyWait, CapsLock, D, T0.15		; and pressed again within 0.2 seconds
+; if (ErrorLevel = 0)			; timed-out (only a single press
+; Send, { ESC }  
+; Return
 
 CapsLock & 1:: keyWithCtrlAltShift("F1","1")        ;F1 - F12
 CapsLock & 2:: keyWithCtrlAltShift("F2","2")

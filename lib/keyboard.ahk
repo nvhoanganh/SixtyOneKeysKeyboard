@@ -56,6 +56,7 @@ CapsLock & x:: Send ^x
 CapsLock & c:: Send ^c
 CapsLock & v:: Send ^v
 CapsLock & b:: Send ^b
+CapsLock & \:: Send ^\
 
 
 CapsLock & Space:: Send, { ESC }

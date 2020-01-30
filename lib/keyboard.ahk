@@ -61,6 +61,7 @@ CapsLock & \:: Send ^\
 
 
 CapsLock & Space:: Send, { ESC }
+!Space:: Send ^g
 CapsLock & Enter:: Send, ^{Enter}
 AppsKey::WheelUp
 RAlt::LWin

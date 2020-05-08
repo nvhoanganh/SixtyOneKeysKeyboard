@@ -6,14 +6,13 @@ SetCapsLockState, AlwaysOff
 ; SetNumlockState, AlwaysOn
 
 ;-----------------------------------o
-; CapsLock & `::                                  ;CapsLock + ` | {CapsLock}
-; GetKeyState, CapsLockState, CapsLock, T
-; if CapsLockState = D
-;     SetCapsLockState, AlwaysOff
-; else
-;     SetCapsLockState, AlwaysOn
-; KeyWait, ``
-; return
+CapsLock & `::                                  ;CapsLock + ` | {CapsLock}
+GetKeyState, CapsLockState, CapsLock, T
+if CapsLockState = D
+    SetCapsLockState, AlwaysOff
+else
+    SetCapsLockState, AlwaysOn
+return
 
 ; ~$CapsLock::
 ; KeyWait, CapsLock, U		; wait for z to be released

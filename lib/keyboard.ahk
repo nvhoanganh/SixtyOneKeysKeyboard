@@ -89,8 +89,10 @@ CapsLock & BackSpace:: keyWithCtrlAltShift("Del","BackSpace")       ;Del
 LWin::LCtrl
 
 CapsLock & u::keyWithCtrlAltShift("PgUp","u")       ;PageUp
+CapsLock & m::keyWithCtrlAltShift("PgDn","m")       ;PageDown
+
+; navigation keys
 CapsLock & i::keyWithCtrlAltShift("Up", "i")        ;Up
 CapsLock & j::keyWithCtrlAltShift("Left", "j")      ;Left
 CapsLock & k::keyWithCtrlAltShift("Down", "k")      ;Down
 CapsLock & l::keyWithCtrlAltShift("Right", "l")     ;Right
-CapsLock & m::keyWithCtrlAltShift("PgDn","m")       ;PageDown

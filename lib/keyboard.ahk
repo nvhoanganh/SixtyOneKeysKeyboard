@@ -27,7 +27,13 @@ SetCapsLockState, AlwaysOff
 ; move mouse to center of the screen
 CapsLock & [:: 
 CoordMode, Mouse, Screen
-MouseMove, (A_ScreenWidth // 2), (A_ScreenHeight // 2)
+MouseMove, (A_ScreenWidth // 5), (A_ScreenHeight // 2)
+Send, { Click Left }
+Return
+
+CapsLock & ]:: 
+CoordMode, Mouse, Screen
+MouseMove, (A_ScreenWidth // 5) * 4, (A_ScreenHeight // 5) * 4
 Send, { Click Left }
 Return
 

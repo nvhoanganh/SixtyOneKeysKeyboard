@@ -3,18 +3,17 @@
 SetCapsLockState, AlwaysOff
 #include %A_LineFile%\..\remote-desktop.ahk.
 ; diable the NumLock so as to only use the number pad for numbers
-SetNumlockState, AlwaysOn
+; SetNumlockState, AlwaysOn
 
 ;-----------------------------------o
-CapsLock & `::                                  ;CapsLock + ` | {CapsLock}
-GetKeyState, CapsLockState, CapsLock, T
-if CapsLockState = D
-    SetCapsLockState, AlwaysOff
-else
-    SetCapsLockState, AlwaysOn
-KeyWait, ``
-return
-
+; CapsLock & `::                                  ;CapsLock + ` | {CapsLock}
+; GetKeyState, CapsLockState, CapsLock, T
+; if CapsLockState = D
+;     SetCapsLockState, AlwaysOff
+; else
+;     SetCapsLockState, AlwaysOn
+; KeyWait, ``
+; return
 
 ; ~$CapsLock::
 ; KeyWait, CapsLock, U		; wait for z to be released
@@ -23,6 +22,15 @@ return
 ; CoordMode, Mouse, Screen
 ; MouseMove, (A_ScreenWidth // 2), (A_ScreenHeight // 2)
 ; Return
+
+
+; move mouse to center of the screen
+CapsLock & [:: 
+CoordMode, Mouse, Screen
+MouseMove, (A_ScreenWidth // 2), (A_ScreenHeight // 2)
+Send, { Click Left }
+Return
+
 
 CapsLock & 1:: keyWithCtrlAltShift("F1","1")        ;F1 - F12
 CapsLock & 2:: keyWithCtrlAltShift("F2","2")
@@ -71,8 +79,8 @@ CapsLock & `;::keyWithCtrlAltShift("Home", ",")      ;Home
 CapsLock & '::keyWithCtrlAltShift("End", ".")      ;End
 CapsLock & BackSpace:: keyWithCtrlAltShift("Del","BackSpace")       ;Del
 ;CapsLock & `;:: Send, { AppsKey }               ;Context Menu
-CapsLock & ]:: Send, { Click Right }            ;Click Right
-CapsLock & [:: Send, { Click Left }             ;Click Left
+; CapsLock & ]:: Send, { Click Right }            ;Click Right
+; CapsLock & [:: Send, { Click Left }             ;Click Left
 LWin::LCtrl
 
 CapsLock & u::keyWithCtrlAltShift("PgUp","u")       ;PageUp

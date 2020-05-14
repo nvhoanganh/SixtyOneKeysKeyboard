@@ -78,8 +78,8 @@ CapsLock & Space:: Send, { ESC }
 CapsLock & Enter:: Send, ^{Enter}
 AppsKey::WheelUp
 RAlt::LWin
-CapsLock & <::Browser_Back
-CapsLock & >::Browser_Forward  
+CapsLock & ,::Browser_Back
+CapsLock & .::Browser_Forward  
 CapsLock & `;::keyWithCtrlAltShift("Home", ",")      ;Home
 CapsLock & '::keyWithCtrlAltShift("End", ".")      ;End
 CapsLock & BackSpace:: keyWithCtrlAltShift("Del","BackSpace")       ;Del

@@ -74,7 +74,7 @@ CapsLock & \:: Send ^\
 
 
 CapsLock & Space:: Send, { ESC }
-!Space:: Send ^g
+!Space:: keyWithCtrlAltShift("F8","8")
 CapsLock & Enter:: Send, ^{Enter}
 AppsKey::WheelUp
 RAlt::LWin
